@@ -34,13 +34,12 @@ const Timer = (props: timerProps) => {
 				value={percentage}
 				text={`${formattedTime[0]} : ${formattedTime[1]}`}
 				background
-				backgroundPadding={3}
-				strokeWidth={3.5}
+				strokeWidth={1}
 				styles={buildStyles({
 					backgroundColor: 'transparent',
 					textColor: '#fff',
 					pathColor: '#fff',
-					trailColor: 'transparent',
+					trailColor: '#999',
 				})}
 			/>
 		</div>

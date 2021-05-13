@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import Timer from './Components/Timer';
+import Dots from './Components/Dots';
 import './Styles/App.css';
 
-function App() {
+const App = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setCurrentTimeState(
@@ -22,17 +23,26 @@ function App() {
 	const [countdownState, setCountdownState] = useState(false);
 
 	const toggleCountdown = () => {
-		setCountdownState(!countdownState)
-	}
+		setCountdownState(!countdownState);
+	};
 
 	return (
 		<div
 			style={{
 				height: '100vh',
 			}}
-			id="App"
+			id='App'
 		>
-			<Timer startingTime={startTimeState} currentTime={currentTimeState} toggleCoundown={toggleCountdown} />
+			<Timer
+				startingTime={startTimeState}
+				currentTime={currentTimeState}
+				toggleCoundown={toggleCountdown}
+			/>
+			<Dots dotArray={[
+				[true, true, true],
+				[true, true, true],
+				[true, false, false],
+			]} />
 		</div>
 	);
 }

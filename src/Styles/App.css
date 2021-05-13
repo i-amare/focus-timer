@@ -2,7 +2,7 @@
 	--colour1: #223843;
 	--colour2: #223843;
 }
-	
+
 * {
 	text-align: center;
 	color: antiquewhite;
@@ -10,9 +10,15 @@
 
 #App {
 	background-color: var(--colour1);
-	background-image: linear-gradient(315deg, var(--colour1) 0%, var(--colour2) 74%);
+	background-image: linear-gradient(
+		315deg,
+		var(--colour1) 0%,
+		var(--colour2) 74%
+	);
 	background-size: 600%;
 	animation: bg-colour-animation 10s infinite alternate;
+	display: flex;
+	flex-direction: column;
 }
 
 @keyframes bg-colour-animation {
@@ -28,7 +34,6 @@
 	display: grid;
 	width: 85%;
 	margin: auto;
-	padding-top: 7.5vh;
 	transition: width 0.2s;
 	transition: padding-top 0.2s;
 }
@@ -37,4 +42,3 @@
 	width: 80%;
 	padding-top: 8vh;
 }
-
