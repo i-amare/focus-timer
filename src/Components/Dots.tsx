@@ -10,12 +10,13 @@ const Dots = (props: dotsProps) => {
 		width: '50%',
 		margin: 'auto',
 		display: 'flex',
-		justifyContent: 'space-evenly'
+		justifyContent: 'space-evenly',
 	};
 
 	const setStyling: CSSProperties = {
 		display: 'flex',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		margin: '4px'
 	}
 
 	const dotStyling: CSSProperties = {

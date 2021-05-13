@@ -1,11 +1,11 @@
 :root {
-	--colour1: #223843;
-	--colour2: #223843;
+	--colour1: #ee9ca7;
+	--colour2: #ffdde1;
 }
 
 * {
 	text-align: center;
-	color: antiquewhite;
+	color: #fff;
 }
 
 #App {
@@ -19,6 +19,7 @@
 	animation: bg-colour-animation 10s infinite alternate;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 @keyframes bg-colour-animation {
@@ -34,11 +35,18 @@
 	display: grid;
 	width: 85%;
 	margin: auto;
-	transition: width 0.2s;
-	transition: padding-top 0.2s;
+	transition: all 0.2s;
 }
 
 .timer-container:active {
 	width: 80%;
-	padding-top: 8vh;
+}
+
+.timer-control-container {
+	transition: all 0.25s;
+	margin-bottom: 12.5vh;
+}
+
+.timer-control-container:active {
+	font-size: 5px;
 }
