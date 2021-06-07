@@ -39,7 +39,8 @@ const Timer = (props: timerProps) => {
 					backgroundColor: 'transparent',
 					textColor: '#fff',
 					pathColor: '#fff',
-					trailColor: '#999',
+					trailColor: 'transparent',
+					pathTransitionDuration: 1,
 				})}
 			/>
 		</div>

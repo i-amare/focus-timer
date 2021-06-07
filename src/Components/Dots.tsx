@@ -5,23 +5,22 @@ interface dotsProps {
 }
 
 const Dots = (props: dotsProps) => {
-
 	const conatinerStyling: CSSProperties = {
-		width: '50%',
 		margin: 'auto',
 		display: 'flex',
-		justifyContent: 'space-evenly',
+		justifyContent: 'center',
+		overflow: 'hidden',
 	};
 
 	const setStyling: CSSProperties = {
 		display: 'flex',
 		justifyContent: 'center',
-		margin: '4px'
-	}
+		margin: '4px',
+	};
 
 	const dotStyling: CSSProperties = {
-		width: '5px',
-		height: '5px',
+		width: '3px',
+		height: '3px',
 		borderRadius: '50%',
 		margin: '2px',
 	};
@@ -40,6 +39,7 @@ const Dots = (props: dotsProps) => {
 				<div style={setStyling} key='setIdx'>
 					{set.map((dot: boolean, dotIdx: number) => (
 						<div
+							key={dotIdx}
 							style={{
 								...(dot ? completedStyle : incompleteStyle),
 								...dotStyling,
